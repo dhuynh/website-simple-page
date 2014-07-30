@@ -34,6 +34,15 @@ Thanks! -->
 			margin-bottom: 10px; 
 			-webkit-font-smoothing: antialiased; 
 		}
+	.container {
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	}
 	#about 
 		a 
 		{ 
@@ -57,9 +66,9 @@ Thanks! -->
 		{ 
 			width: 50px; 
 			margin: 0; 
-			position: relative; 
+			position: absolute; 
 			right: 50px; 
-			top: 40px;
+			top: 10%;
 		}
 	#about 
 		{ 
@@ -73,7 +82,7 @@ Thanks! -->
 			right: -webkit-calc(80% - 125px);
 			position: absolute; 
 			width: 200px; 
-			padding: 30px 20px 40px 20px; 
+			padding: 30px 20px 30px 20px; 
 			margin: 10px auto 10px 50px !important;
 			background: rgba(0, 0, 0, 0.6);
 			border-radius: 15px;
@@ -89,6 +98,13 @@ Thanks! -->
 			line-height: 130%; 
 			color: #0076a3; 
 			text-shadow: none;
+		}
+	#image
+		{
+			width:100%;
+			height:100%;
+			background-size: cover;
+			position: absolute;
 		}
 	#connect
 		ul
@@ -152,43 +168,38 @@ Thanks! -->
     
 <body>
 
+<div class="container">
+	<div id="image" style="background-image:url(duy.jpg);">
+		<div id="logo">
+			<img src="logo.png" />
+		</div>
 
-<div id="logo">
-	<img src="logo.png" />
-</div>
 
+		<div id="about">
+			<h1>Duy Huynh</h1>
+			<!--
+			<p> I am a student at the University of Waterloo doing my undergrad in Systems Design Engineering. On the side, I enjoy tinkering around with hardware and brainstorming ideas. I've even named my arduino Deezed, which means strong and represents my stance on project development. I have dived into the realm of side projects, software development, and mechanical design. </p> -->
 
-<div id="about">
-	<h1>Duy Huynh</h1>
-	<!--
-	<p> I am a student at the University of Waterloo doing my undergrad in Systems Design Engineering. On the side, I enjoy tinkering around with hardware and brainstorming ideas. I've even named my arduino Deezed, which means strong and represents my stance on project development. I have dived into the realm of side projects, software development, and mechanical design. </p> -->
+			<p><a href="https://medium.com/@noahbeta1">medium</a>.</p>
+			<p><a href="https://www.facebook.com/duyhunnie">facebook</a>. </p>
+			<p><a href="http://steamcommunity.com/id/stylezduy">steam</a>. </p>
+			<p><a href="resume.pdf">resume</a>. </p>
 
-	<p>
-	<a href="https://medium.com/@noahbeta1">medium</a>.
-	</p>
-	<p>
-	<a href="https://www.facebook.com/duyhunnie">facebook</a>. 
-	</p>
-	<p>
-	<a href="http://steamcommunity.com/id/stylezduy">steam</a>. 
-	</p>
-	<p>
-	 <a href="resume.pdf">resume</a>. 
-	</p>
-
-		
-
-<!-- ICONS
-<ul id="connect">
-		<li><a href="http://twitter.com/noahbeta1"><img src="twitter.png"></a></li>
-		<li><a href="http://www.linkedin.com/pub/duy-huynh/59/66/613"><img src="linkedin.png"></a></li>
-		<li><a href="mailto:d.huynh68@gmail.com"><img src="email.png"></a></li>
-		</ul>-->
+			
+	<!-- ICONS
+	<ul id="connect">
+			<li><a href="http://twitter.com/noahbeta1"><img src="twitter.png"></a></li>
+			<li><a href="http://www.linkedin.com/pub/duy-huynh/59/66/613"><img src="linkedin.png"></a></li>
+			<li><a href="mailto:d.huynh68@gmail.com"><img src="email.png"></a></li>
+			</ul>-->
+		</div>
+	</div>
 </div>
 
 
 <!--include jquery & backstretch-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<!--
 <script type="text/javascript" src="jquery.backstretch.min.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -199,7 +210,7 @@ $(function(){
       })
       .resize();//trigger resize on page load
 });
-</script>
+</script>-->
 
 </body>	
 </html>
